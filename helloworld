@@ -1,0 +1,5 @@
+#!/usr/local/bin/lua51
+
+-- Hello World Lua
+
+print ("Hello World!")
