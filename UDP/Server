@@ -1,6 +1,6 @@
 #!/usr/local/bin/lua51
 
-local socket = require("socket")
+require("socket")
 
 udpp = socket.udp()
 udpp:setsockname("*",1300)

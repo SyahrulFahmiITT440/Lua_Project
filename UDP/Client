@@ -1,15 +1,15 @@
 #!/usr/local/bin/lua51
 
-local socket = require("socket")
+require("socket")
 
-udp = socket.udp()
-udp:setpeername("127.0.0.1",1300)
-udp:settimeout()
+MyUDP = socket.udp()
+MyUDP:setpeername("127.0.0.1",1300)
+MyUDP:settimeout()
 
 io.write("Enter anything: ")
 anything = io.read()
-udp:send(anything)
-data = udp:receive()
+MyUDP:send(anything)
+data = MyUDP:receive()
 if data then
   print("Received: ", anything)
 end
